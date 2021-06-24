@@ -1,0 +1,24 @@
+@import '../base/colors';
+
+.aside-nav{
+    width: 100%;
+    
+    &__link{
+        display: block;
+        margin: 2px 0;
+        padding: 10px;
+        
+        i{
+            transition-duration: 0.2s;
+            margin-right: 5px;
+        }
+    }
+}
+
+.aside-nav{
+    &__link:hover{
+        i{
+            margin-right: 20px;
+        }
+    }
+}

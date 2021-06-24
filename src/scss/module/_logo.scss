@@ -1,0 +1,9 @@
+@import '../base/fonts';
+
+.logo{
+    padding: 5px 1%;
+
+    &__name{
+        font-weight: $logo-font;
+    }
+}
