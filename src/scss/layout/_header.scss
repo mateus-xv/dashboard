@@ -1,0 +1,11 @@
+@import '../base/colors';
+
+header{
+	display: inline-flex;
+	width: 70%;
+	min-width: calc(100% - 200px);
+	padding: 6px 1%;
+	background: $beige;
+	color: $dark-green;
+	vertical-align: top;
+}

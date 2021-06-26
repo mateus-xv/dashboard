@@ -8,6 +8,7 @@ import store from './redux/store/store';
 
 //Components
 import Aside from './components/Aside';
+import Header from './components/Header';
 
 //Stylesheets
 import './scss/base/index.scss'
@@ -21,6 +22,7 @@ function App(){
         <Provider store={store}>
             <BrowserRouter>
                 <Aside />
+                <Header />
             </BrowserRouter>
         </Provider>
     )

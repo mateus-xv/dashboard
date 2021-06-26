@@ -1,0 +1,23 @@
+@import '../base/colors';
+
+.user{
+	display: flex;
+	align-items: center;
+
+	&__avatar{
+		position: relative;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		border: 2px solid $dark-green;
+		margin-right: 10px;
+
+		i{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 25px;
+		}
+	}
+}
