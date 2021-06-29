@@ -9,6 +9,7 @@ import store from './redux/store/store';
 //Components
 import Aside from './components/Aside';
 import Header from './components/Header';
+import Main from './components/Main';
 
 //Stylesheets
 import './scss/base/index.scss'
@@ -23,6 +24,7 @@ function App(){
             <BrowserRouter>
                 <Aside />
                 <Header />
+                <Main />
             </BrowserRouter>
         </Provider>
     )

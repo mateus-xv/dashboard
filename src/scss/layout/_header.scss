@@ -1,7 +1,8 @@
 @import '../base/colors';
 
 header{
-	display: inline-flex;
+	display: flex;
+	float: right;
 	width: 70%;
 	min-width: calc(100% - 200px);
 	padding: 6px 1%;
