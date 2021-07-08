@@ -1,0 +1,15 @@
+@import '../base/fonts';
+
+.news{
+	padding: 10px;
+
+	&__title{
+		font-weight: $light-font;
+		margin-bottom: 10px;
+	}
+
+	&__content{
+		width: 100%;
+		font-size: 15px;
+	}
+}

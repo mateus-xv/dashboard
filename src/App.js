@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 import store from './redux/store/store';
 
 //Components
-import Aside from './components/Aside';
-import Header from './components/Header';
-import Main from './components/Main';
+import Aside from './components/Aside/Aside';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 //Stylesheets
 import './scss/base/index.scss'

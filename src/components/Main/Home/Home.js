@@ -1,9 +1,14 @@
 //React Modules
 import React from 'react';
 
+//Components
+import News from './News';
+
 const Home = () => {
 	return(
-		<div></div>
+		<div className="cards-wrapper">
+			<News/>
+		</div>	
 	);
 }
 
