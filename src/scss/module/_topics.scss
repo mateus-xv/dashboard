@@ -1,0 +1,30 @@
+@import '../base/fonts';
+@import '../base/colors';
+
+.topics{
+	padding: 10px;
+
+	&__title{
+		@extend .news__title;
+	}
+
+	&__container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+		list-style-type: none;
+		color: $beige;
+
+	}
+
+	&__single{
+		text-align: center;
+		margin-bottom: 10px;
+		background: $dark-green;
+		width: calc(100%/3.1);
+		padding: 5px 10px;
+		border-radius: 15px;
+	}
+}

@@ -1,8 +1,13 @@
 @import '../base/colors';
 
-section.news{
+section{
 	width: 100%;
 	min-height: 200px;
 	background: $beige;
 	color: $dark-green;
+	margin-bottom: 10px;
+}
+
+section:last-child{
+	margin: 0;
 }
