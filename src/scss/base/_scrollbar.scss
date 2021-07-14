@@ -1,0 +1,11 @@
+@import 'colors';
+
+::-webkit-scrollbar{
+	width: 10px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background: $dark-green;
+}
