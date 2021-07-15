@@ -1,0 +1,39 @@
+@import '../base/colors';
+
+.support{
+	padding: 10px;
+
+	&__title{
+		@extend .news__title;
+	}
+
+	&__form{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		color: $dark-green;
+		width: 100%;
+	}
+
+	&__message{
+		color: inherit;
+		width: 100%;
+		min-height: 150px;
+		padding: 10px;
+		font-size: 16px;
+		resize: none;
+		outline: none;
+		border: none;
+	}
+
+	&__submit{
+		min-height: 150px;
+		padding: 0 10px;
+		font-size: 40px;
+		color: inherit;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: white;
+	}
+}
