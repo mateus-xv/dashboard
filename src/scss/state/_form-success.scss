@@ -16,16 +16,10 @@
 	visibility: hidden;
 
 	&__message{
+		cursor: pointer;
 		color: inherit;
 		margin-bottom: 5px;
-	}
-
-	&__button{
-		color: inherit;
-		background: transparent;
-		cursor: pointer;
-		border: none;
-		outline: none;
+		text-align: center;
 	}
 }
 
