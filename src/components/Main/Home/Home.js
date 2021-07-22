@@ -5,14 +5,20 @@ import React from 'react';
 import News from './News';
 import Topics from '../shared/Topics/Topics';
 import Support from './Support';
+import Activity from './Activity';
 
 const Home = () => {
 	return(
-		<div className="cards-wrapper">
-			<News/>
-			<Topics/>
-			<Support/>
-		</div>	
+		<React.Fragment>	
+			<div className="cards-wrapper">
+				<News/>
+				<Topics/>
+				<Support/>
+			</div>	
+			<div className="column-wrapper">
+				<Activity/>
+			</div>
+		</React.Fragment>
 	);
 }
 
