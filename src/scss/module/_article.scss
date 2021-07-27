@@ -1,0 +1,35 @@
+@import '../base/colors';
+
+.article{
+	padding: 10px;
+	min-height: initial;
+
+	&__title{
+		@extend .news__title;
+	}
+
+	&__actions{
+		width: calc(100% - 20px);
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+	}
+
+	&__see-more{
+		background: none;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		color: $dark-green;
+		font-size: 16px;
+	}
+
+	&__save{
+		background: none;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		color: $dark-green;
+		font-size: 16px;
+	}
+}
