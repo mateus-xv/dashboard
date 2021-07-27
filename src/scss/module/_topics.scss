@@ -9,6 +9,7 @@
 	}
 
 	&__container{
+		height: calc(100% - 39px);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -16,15 +17,31 @@
 		flex-wrap: wrap;
 		list-style-type: none;
 		color: $beige;
+		overflow: auto;
 
 	}
 
 	&__single{
+		cursor: pointer;
 		text-align: center;
 		margin-bottom: 10px;
 		background: $dark-green;
 		width: calc(100%/3.1);
 		padding: 5px 10px;
 		border-radius: 15px;
+	}
+}
+
+.topics--feed{
+	@extend .topics;
+	height: 100%;
+
+	.topics__single{
+		width: calc(100%/2.1);
+		margin: 10px 0;
+	}
+
+	.topics__single:nth-of-type(3n){
+		width: 100%;
 	}
 }

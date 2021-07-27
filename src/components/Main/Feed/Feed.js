@@ -3,14 +3,16 @@ import React from 'react';
 
 //Components
 import Article from './Article'
+import Topics from '../shared/Topics/Topics'
 
 const Feed = () => {
 	return(
 		<React.Fragment>	
 			<div className="cards-wrapper">
-				<Article/>
+				<Article />
 			</div>
 			<div className="column-wrapper">
+				<Topics />
 			</div>
 		</React.Fragment>
 	);
