@@ -1,9 +1,14 @@
 //React Modules
 import React from 'react';
 
+//Components
+import Note from './Note';
+
 const Notes = () => {
 	return(
-		<div></div>
+		<React.Fragment>
+			<Note/>
+		</React.Fragment>
 	);
 }
 

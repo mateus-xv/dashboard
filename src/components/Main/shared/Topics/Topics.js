@@ -6,7 +6,7 @@ const Topics = () => {
 	//Returns the className based on the pathname
 	const urlCheck = () => {
 		const path = window.location.pathname;
-		if(path == "/feed")
+		if(path === "/feed")
 			return "topics--feed";
 
 		return "topics";
