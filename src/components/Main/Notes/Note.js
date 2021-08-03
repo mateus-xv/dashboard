@@ -2,14 +2,17 @@
 import React, {useEffect} from "react";
 
 const Note = () => {
+	//Handles the click event on the note title, turning the modal visible
 	const noteHandleClick = (noteModal) => {
 		noteModal.classList.add("note__modal--visible");
 	};
 
+	//Handles the click event on the outside of the modal, turning the modal hidden 
 	const modalHandleClick = (noteModal) => {
 		noteModal.classList.remove("note__modal--visible");
 	};
 
+	//Prevents the modal from closing when the body of the modal is clicked
 	const bodyHandleClick = (e) => {
 		e.stopPropagation();
 	}

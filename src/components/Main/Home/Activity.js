@@ -1,3 +1,4 @@
+//React Modules
 import React from 'react';
 
 const Activity = () => {
