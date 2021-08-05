@@ -11,13 +11,14 @@
 		width: 50px;
 		border: 2px solid $dark-green;
 		margin-right: 10px;
+		font-size: 25px;
 
 		i{
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
-			font-size: 25px;
+			font-size: inherit;
 		}
 	}
 }

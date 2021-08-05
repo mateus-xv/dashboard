@@ -1,9 +1,14 @@
 //React Modules
 import React from 'react';
 
+//Components
+import ProfileForm from './ProfileForm';
+
 const Profile = () => {
 	return(
-		<div></div>
+		<section className="profile">
+			<ProfileForm/>	
+		</section>
 	);
 }
 
