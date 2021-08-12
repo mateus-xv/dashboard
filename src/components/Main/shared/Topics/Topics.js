@@ -3,10 +3,10 @@ import React from "react";
 
 const Topics = () => {
 
-	//Returns the className based on the pathname
+	//Returns the className based on the hash 
 	const urlCheck = () => {
-		const path = window.location.pathname;
-		if(path === "/feed")
+		const path = window.location.hash;
+		if(path === "#/feed")
 			return "topics--feed";
 
 		return "topics";

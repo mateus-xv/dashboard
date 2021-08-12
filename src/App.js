@@ -1,6 +1,6 @@
 //React Modules
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 //Redux
@@ -21,11 +21,11 @@ import '@fortawesome/fontawesome-free/css/all.css'
 function App(){
     return(
         <Provider store={store}>
-            <BrowserRouter>
+            <HashRouter>
                 <Aside />
                 <Header />
                 <Main />
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     )
 }
