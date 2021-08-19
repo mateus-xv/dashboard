@@ -2,7 +2,7 @@
 import React from 'react';
 
 //Components
-import Article from './Article'
+import Article from '../shared/Article/Article'
 import Topics from '../shared/Topics/Topics'
 
 const Feed = () => {

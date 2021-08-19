@@ -1,9 +1,16 @@
 //React Modules
 import React from 'react';
 
+//Components
+import Article from '../shared/Article/Article';
+
 const Saved = () => {
 	return(
-		<div></div>
+		<div className="saved">
+			<div className="cards-wrapper">
+				<Article/>
+			</div>
+		</div>
 	);
 };
 
