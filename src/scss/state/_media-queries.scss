@@ -1,3 +1,25 @@
-@media screen and (max-width: 760px){
+@media screen and (max-width: 760px) {
+	aside {
+		display: none;
+	}
 
+	header {
+		width: 100%;
+	}
+
+	main {
+		display: block;
+		width: 100%;
+	}
+
+	.cards-wrapper {
+		width: 100%;
+		height: initial;
+	}
+
+	.column-wrapper {
+		width: 100%;
+		height: initial;
+		padding: 0 10px;
+	}
 }
