@@ -12,11 +12,11 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 
 //Stylesheets
+import '@fortawesome/fontawesome-free/css/all.css'
 import './scss/base/index.scss'
 import './scss/layout/index.scss'
 import './scss/module/index.scss'
 import './scss/state/index.scss'
-import '@fortawesome/fontawesome-free/css/all.css'
 
 function App(){
     return(
