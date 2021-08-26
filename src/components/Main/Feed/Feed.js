@@ -8,11 +8,11 @@ import Topics from '../shared/Topics/Topics'
 const Feed = () => {
 	return(
 		<React.Fragment>	
-			<div className="cards-wrapper">
-				<Article />
-			</div>
 			<div className="column-wrapper">
 				<Topics />
+			</div>
+			<div className="cards-wrapper">
+				<Article />
 			</div>
 		</React.Fragment>
 	);
