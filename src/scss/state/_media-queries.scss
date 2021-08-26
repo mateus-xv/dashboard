@@ -1,6 +1,10 @@
 @media screen and (max-width: 760px) {
 	aside {
-		display: none;
+		position: absolute;
+		left: -100%;
+		top: 0;
+		z-index: 1;
+		width: 40%;
 	}
 
 	header {

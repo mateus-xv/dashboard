@@ -1,7 +1,21 @@
 //React Modules
-import React from "react";
+import React, { useEffect } from "react";
 
 const Header = () => {
+    /*
+      Handles the click on the menu button while in small screen,
+      activating the aside navbar
+    */
+    const handleClick = (e, asideNav) => {
+        asideNav.classList.toggle("open");
+    };
+
+    useEffect(() => {
+        const menuButton = document.querySelector(".menu-icon");
+        const asideNav = document.querySelector("aside");
+        menuButton.addEventListener("click", (e) => handleClick(e, asideNav));
+    }, []);
+
     return (
         <header>
             <div className="user">
@@ -10,9 +24,9 @@ const Header = () => {
                 </div>
                 <p className="user__name">Lorem Ipsum</p>
             </div>
-            <div className="menu-icon">
+            <button className="menu-icon">
                 <i className="fas fa-bars"></i>
-            </div>
+            </button>
         </header>
     );
 };
