@@ -1,6 +1,6 @@
 @media screen and (max-width: 760px) {
 	aside {
-		position: absolute;
+		position: fixed;
 		left: -100%;
 		top: 0;
 		z-index: 1;
@@ -29,5 +29,23 @@
 
 	.menu-icon {
 		display: initial;
+	}
+
+	.note {
+		&__single {
+			width: calc(100% / 2.1);
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.note {
+		justify-content: center;
+
+		&__single {
+			max-width: none;
+			width: 100%;
+			height: fit-content;
+		}
 	}
 }
