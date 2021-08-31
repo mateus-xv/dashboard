@@ -1,7 +1,13 @@
 //React Modules
 import React, { useEffect } from "react";
 
+//Redux Store
+import store from '../../redux/store/store';
+
 const Header = () => {
+    //Component State
+    const state = store.getState().profile;
+
     /*
       Handles the click on the menu button while in small screen,
       activating the aside navbar and hiding body overflow
@@ -24,7 +30,7 @@ const Header = () => {
                 <div className="user__avatar">
                     <i className="fas fa-user"></i>
                 </div>
-                <p className="user__name">Lorem Ipsum</p>
+                <p className="user__name">{state.username}</p>
             </div>
             <button className="menu-icon">
                 <i className="fas fa-bars"></i>
