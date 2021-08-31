@@ -13,9 +13,10 @@ const ProfileForm = () => {
 	//Component State
 	const state = useSelector(profileSelector);
 
-	//Handles Form Submit
+	//Handles form submit, changing username in localStorage and store
 	const handleSubmit = (e, input) => {
 		e.preventDefault();
+		localStorage.setItem("username", input.value);
 		usernameChange(input.value);
 	};
 
