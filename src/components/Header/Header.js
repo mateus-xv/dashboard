@@ -1,12 +1,14 @@
 //React Modules
 import React, { useEffect } from "react";
 
-//Redux Store
-import store from '../../redux/store/store';
+//Redux Modules
+import {useSelector} from 'react-redux';
+
+const headerSelector = (state) => state.profile;
 
 const Header = () => {
     //Component State
-    const state = store.getState().profile;
+    const state = useSelector(headerSelector);
 
     /*
       Handles the click on the menu button while in small screen,

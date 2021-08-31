@@ -1,22 +1,47 @@
 //React Modules
-import React from 'react';
+import React, { useEffect } from "react";
 
-//Redux Store
-import store from '../../../redux/store/store';
+//Redux Modules
+import {useSelector} from 'react-redux';
+
+//Action Creator
+import { usernameChange } from "../../../redux/creators/actionCreators";
+
+const profileSelector = (state) => state.profile;
 
 const ProfileForm = () => {
 	//Component State
-	const state = store.getState().profile;
+	const state = useSelector(profileSelector);
 
-	return(
+	//Handles Form Submit
+	const handleSubmit = (e, input) => {
+		e.preventDefault();
+		usernameChange(input.value);
+	};
+
+	useEffect(() => {
+		const form = document.querySelector(".profile__form");
+		const input = document.getElementById("username");
+
+		form.addEventListener("submit", (e) => handleSubmit(e, input));
+	},[])
+
+	return (
 		<form className="profile__form">
-            <div className="user">
-               <div className="user__avatar"><i className="fas fa-user"></i></div>
-            </div>
-			<input type="text" name="username" id="username" placeholder={state.username}/>
+			<div className="user">
+				<div className="user__avatar">
+					<i className="fas fa-user"></i>
+				</div>
+			</div>
+			<input
+				type="text"
+				name="username"
+				id="username"
+				placeholder={state.username}
+			/>
 			<button className="profile__submit">Submit</button>
 		</form>
-	)
+	);
 };
 
 export default ProfileForm;
