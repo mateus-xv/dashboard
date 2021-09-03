@@ -3,7 +3,7 @@ import React from 'react';
 
 //Components
 import News from './News';
-import Topics from '../shared/Topics/Topics';
+import Topics from 'components/Main/shared/Topics/Topics';
 import Support from './Support';
 import Activity from './Activity';
 

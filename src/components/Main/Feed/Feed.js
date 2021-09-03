@@ -2,8 +2,8 @@
 import React from 'react';
 
 //Components
-import Article from '../shared/Article/Article'
-import Topics from '../shared/Topics/Topics'
+import Article from 'components/Main/shared/Article/Article'
+import Topics from 'components/Main/shared/Topics/Topics'
 
 const Feed = () => {
 	return(

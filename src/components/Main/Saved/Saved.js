@@ -2,7 +2,7 @@
 import React from 'react';
 
 //Components
-import Article from '../shared/Article/Article';
+import Article from 'components/Main/shared/Article/Article';
 
 const Saved = () => {
 	return(

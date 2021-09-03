@@ -4,19 +4,19 @@ import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 //Redux
-import store from './redux/store/store';
+import store from 'redux/store/store';
 
 //Components
-import Aside from './components/Aside/Aside';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Aside from 'components/Aside/Aside';
+import Header from 'components/Header/Header';
+import Main from 'components/Main/Main';
 
 //Stylesheets
 import '@fortawesome/fontawesome-free/css/all.css'
-import './scss/base/index.scss'
-import './scss/layout/index.scss'
-import './scss/module/index.scss'
-import './scss/state/index.scss'
+import 'scss/base/index.scss'
+import 'scss/layout/index.scss'
+import 'scss/module/index.scss'
+import 'scss/state/index.scss'
 
 function App(){
     return(
