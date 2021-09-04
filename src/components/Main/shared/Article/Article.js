@@ -1,7 +1,7 @@
 //React Modules
 import React from "react";
 
-const Article = ({ title, body }) => {
+const Article = ({ title, body, url }) => {
 	return (
 		<section className="article">
 			<h2 className="article__title">{title}</h2>
@@ -10,9 +10,9 @@ const Article = ({ title, body }) => {
 				<button className="article__save">
 					<i className="far fa-bookmark"></i>
 				</button>
-				<button className="article__see-more">
+				<a href={url} target="_blank" rel="noreferrer" className="article__see-more">
 					See More <i className="fas fa-arrow-circle-right"></i>
-				</button>
+				</a>
 			</div>
 		</section>
 	);
