@@ -1,18 +1,11 @@
 //React Modules
 import React from "react";
 
-const Article = () => {
+const Article = ({ title, body }) => {
 	return (
 		<section className="article">
-			<h2 className="article__title">Lorem Ipsum</h2>
-			<p className="article__body">
-				Labore consequat nulla ut elit anim cupidatat enim cillum elit
-				ad dolor. Pariatur fugiat dolore in culpa culpa sed sint
-				excepteur in esse enim nisi sint ad anim magna exercitation sint
-				reprehenderit pariatur irure laboris pariatur commodo irure sed
-				irure exercitation ad laborum aute mollit reprehenderit
-				cupidatat pariatur.
-			</p>
+			<h2 className="article__title">{title}</h2>
+			<p className="article__body">{body}</p>
 			<div className="article__actions">
 				<button className="article__save">
 					<i className="far fa-bookmark"></i>
