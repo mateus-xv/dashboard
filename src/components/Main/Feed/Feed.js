@@ -4,9 +4,6 @@ import React from "react";
 //Redux Modules
 import { useSelector } from "react-redux";
 
-//Action Creators
-import { apiFetchSuccess } from "redux/creators/actionCreators";
-
 //Components
 import Article from "components/Main/shared/Article/Article";
 import Topics from "components/Main/shared/Topics/Topics";
@@ -15,9 +12,7 @@ import Topics from "components/Main/shared/Topics/Topics";
 import getNews from "utils/getNews";
 
 //Doing API request and adding to the store
-getNews().then((res) => {
-	apiFetchSuccess(res);
-});
+getNews();
 
 const selector = (state) => state.feed;
 
