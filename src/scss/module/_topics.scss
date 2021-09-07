@@ -1,14 +1,14 @@
-@import '../base/fonts';
-@import '../base/colors';
+@import "../base/fonts";
+@import "../base/colors";
 
-.topics{
+.topics {
 	padding: 10px;
 
-	&__title{
+	&__title {
 		@extend .news__title;
 	}
 
-	&__container{
+	&__container {
 		height: calc(100% - 39px);
 		display: flex;
 		align-items: center;
@@ -18,30 +18,37 @@
 		list-style-type: none;
 		color: $beige;
 		overflow: auto;
+	}
+
+	&__single {
+		cursor: pointer;
+		margin-bottom: 10px;
+		width: calc(100% / 3.1);
 
 	}
 
-	&__single{
-		cursor: pointer;
+	&__button{
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		color: inherit;
 		text-align: center;
-		margin-bottom: 10px;
 		background: $dark-green;
-		width: calc(100%/3.1);
 		padding: 5px 10px;
 		border-radius: 15px;
 	}
 }
 
-.topics--feed{
+.topics--feed {
 	@extend .topics;
 	height: 100%;
 
-	.topics__single{
-		width: calc(100%/2.1);
+	.topics__single {
+		width: calc(100% / 2.1);
 		margin: 10px 0;
 	}
 
-	.topics__single:nth-of-type(3n){
+	.topics__single:nth-of-type(3n) {
 		width: 100%;
 	}
 }

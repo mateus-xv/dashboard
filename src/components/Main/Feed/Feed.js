@@ -26,8 +26,9 @@ const Feed = () => {
 				<Topics />
 			</div>
 			<div className="cards-wrapper">
-				{state.articles.results.map((article) => (
+				{state.articles.results.map((article, index) => (
 					<Article
+						key={index}
 						title={article.title}
 						body={article.abstract}
 						url={article.url}
