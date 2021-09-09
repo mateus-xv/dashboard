@@ -26,14 +26,14 @@ const Feed = () => {
 				<Topics />
 			</div>
 			<div className="cards-wrapper">
-				{state.articles.results.map((article, index) => (
+				{state.articles.results != null? state.articles.results.map((article, index) => (
 					<Article
 						key={index}
 						title={article.title}
 						body={article.abstract}
 						url={article.url}
 					/>
-				))}
+				)) : null}
 			</div>
 		</React.Fragment>
 	);
