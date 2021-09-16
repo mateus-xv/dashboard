@@ -1,20 +1,36 @@
-//Redux Store 
-import store from 'redux/store/store';
+//Redux Store
+import store from "redux/store/store";
 
 //Action Creator
-import {apiFetchSuccess} from 'redux/creators/actionCreators';
+import {
+    apiFetchSuccess,
+    apiFetchLoading,
+    apiFetchFailed,
+} from "redux/creators/actionCreators";
+
+//Delay between function calls
+const delay = 1000;
+let lastExecution = 0;
 
 export function getNews(section) {
-    return async function getNewsThunk(){
-        let apiKey = process.env.REACT_APP_NEWSAPI_KEY,
-            url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        apiFetchSuccess(data);
-        console.log(data);
-    }
+    return async function getNewsThunk() {
+        //Prevent function calls inside delay range
+        if (lastExecution + delay < Date.now()) {
+            lastExecution = Date.now();
+            let apiKey = process.env.REACT_APP_NEWSAPI_KEY,
+                url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
+            apiFetchLoading();
+            const response = await fetch(url);
+            if (!response.ok) {
+                apiFetchFailed();
+            } else {
+                const data = await response.json();
+                apiFetchSuccess(data);
+            }
+        }
+    };
 }
 
-export default function getNewsCaller(section = "home"){
+export default function getNewsCaller(section = "home") {
     store.dispatch(getNews(section));
 }

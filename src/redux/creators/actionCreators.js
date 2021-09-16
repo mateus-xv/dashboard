@@ -12,3 +12,14 @@ export const apiFetchSuccess = (data) =>
         type: "feed/articlesSuccess",
         payload: data,
     });
+
+export const apiFetchFailed = () =>
+    store.dispatch({
+        type: "feed/articlesFailed"
+    });
+
+export const apiFetchLoading = () =>
+    store.dispatch({
+        type: "feed/articlesLoading"
+    });
+
