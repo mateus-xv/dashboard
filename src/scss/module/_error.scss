@@ -1,0 +1,14 @@
+@import 'scss/base/colors';
+
+.error{
+    color: $error-red;
+    text-align:  center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    i{
+        font-size: 50px;
+    }
+}

@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import Article from "components/Main/shared/Article/Article";
 import Topics from "components/Main/shared/Topics/Topics";
 import Loading from "components/Main/shared/Loading/Loading";
+import Error from "components/Main/shared/Error/Error";
 
 //API Async Function
 import getNews from "utils/getNews";
@@ -26,8 +27,8 @@ const Feed = () => {
         if (state.isLoading) {
             return <Loading />;
         } else if (state.error) {
-            return <p>An Error Ocurred</p>;
-        } else if (!state.error && state.articles.results){
+            return <Error />;
+        } else if (!state.error && state.articles.results) {
             return state.articles.results.map((article, index) => (
                 <Article
                     key={index}
