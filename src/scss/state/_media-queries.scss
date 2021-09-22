@@ -33,8 +33,10 @@
 	}
 
 	.note {
+        justify-content: space-evenly;
 		&__single {
-			width: calc(100% / 2.1);
+			width: calc(100% / 1.9);
+            margin: 0 5 10px 5;
 		}
 	}
 }
