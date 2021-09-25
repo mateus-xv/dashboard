@@ -1,7 +1,7 @@
 //React Modules
 import React, { useEffect } from "react";
 
-const Note = ({ title, content }) => {
+const Note = ({ title, header, content }) => {
     //Handles the click event on the note title, turning the modal visible
     const noteHandleClick = (noteModal) => {
         noteModal.classList.add("note__modal--visible");
@@ -33,7 +33,7 @@ const Note = ({ title, content }) => {
                 {title}
                 <i className="fas fa-arrow-circle-right"></i>
             </h2>
-            <p className="note__content">{content}</p>
+            <p className="note__header">{header}</p>
             <div className="note__modal">
                 <div className="note__body">
                     <h2 className="note__title">{title}</h2>

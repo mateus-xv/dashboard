@@ -14,9 +14,14 @@ const Notes = () => {
     const state = useSelector(selector);
 
     const notesCheck = () => {
-        if (state.notes) {
-            return state.notes.map((note) => (
-                <Note title={note.title} content={note.content} />
+        if (state.notes[0]) {
+            return state.notes.map((note, index) => (
+                <Note
+                    key={index}
+                    title={note.title}
+                    header={note.header}
+                    content={note.content}
+                />
             ));
         } else {
             return <p>You don't have any notes</p>;
@@ -24,9 +29,7 @@ const Notes = () => {
     };
     return (
         <React.Fragment>
-            <ul className="note">
-                {notesCheck()}
-            </ul>
+            <ul className="note">{notesCheck()}</ul>
             <Add />
         </React.Fragment>
     );

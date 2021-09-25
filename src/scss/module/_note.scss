@@ -16,7 +16,6 @@
         width: calc(100% / 3.1);
         max-width: 300px;
         min-width: 220px;
-        height: 250px;
         margin: 10px;
         padding: 10px;
         background: $beige;
@@ -24,11 +23,16 @@
 
     &__title {
         @extend .news__title;
-        width: fit-content;
+        width: 100%;
+        word-wrap: break-word;
         cursor: pointer;
         i {
             margin-left: 5px;
         }
+    }
+
+    &__header{
+        word-wrap: break-word;
     }
 
     &__modal {
@@ -64,6 +68,7 @@
     &__content-wrapper {
         width: 100%;
         height: calc(100% - 39px);
+        word-wrap: break-word;
         overflow: auto;
     }
 }

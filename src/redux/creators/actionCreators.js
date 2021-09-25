@@ -15,11 +15,17 @@ export const apiFetchSuccess = (data) =>
 
 export const apiFetchFailed = () =>
     store.dispatch({
-        type: "feed/articlesFailed"
+        type: "feed/articlesFailed",
     });
 
 export const apiFetchLoading = () =>
     store.dispatch({
-        type: "feed/articlesLoading"
+        type: "feed/articlesLoading",
     });
 
+export const addNote = (data) => {
+    store.dispatch({
+        type: "notes/addNote",
+        payload: data,
+    });
+};
