@@ -1,14 +1,16 @@
 //React Modules
-import React, { useEffect } from "react";
+import React from "react";
 
 const Note = ({ title, header, content }) => {
     //Handles the click event on the note title, turning the modal visible
     const noteHandleClick = (noteModal) => {
-        noteModal.classList.add("note__modal--visible");
+        if (!noteModal.classList.contains("note__modal--visible"))
+            noteModal.classList.add("note__modal--visible");
     };
 
     //Handles the click event on the outside of the modal, turning the modal hidden
-    const modalHandleClick = (noteModal) => {
+    const modalHandleClick = (e, noteModal) => {
+        e.stopPropagation();
         noteModal.classList.remove("note__modal--visible");
     };
 
@@ -17,27 +19,25 @@ const Note = ({ title, header, content }) => {
         e.stopPropagation();
     };
 
-    useEffect(() => {
-        const noteModal = document.querySelector(".note__modal"),
-            noteTitle = document.querySelector(".note__title"),
-            noteBody = document.querySelector(".note__body");
-
-        noteTitle.addEventListener("click", () => noteHandleClick(noteModal));
-        noteModal.addEventListener("click", () => modalHandleClick(noteModal));
-        noteBody.addEventListener("click", bodyHandleClick);
-    }, []);
-
     return (
-        <li className="note__single">
+        <li
+            onClick={(e) =>
+                noteHandleClick(e.currentTarget.querySelector(".note__modal"))
+            }
+            className="note__single"
+        >
             <h2 className="note__title">
                 {title}
                 <i className="fas fa-arrow-circle-right"></i>
             </h2>
             <p className="note__header">{header}</p>
-            <div className="note__modal">
-                <div className="note__body">
-                    <h2 className="note__title">{title}</h2>
+            <div
+                onClick={(e) => modalHandleClick(e, e.target)}
+                className="note__modal"
+            >
+                <div onClick={bodyHandleClick} className="note__body">
                     <div className="note__content-wrapper">
+                        <h2 className="note__title">{title}</h2>
                         <p className="note__content">{content}</p>
                     </div>
                 </div>

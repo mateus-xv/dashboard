@@ -26,7 +26,8 @@ const Add = () => {
             content = document.getElementById("note").value;
         addNote({
             title: title,
-            header: content.slice(0, 200) + "...",
+            header:
+                content.length <= 200 ? content : content.slice(0, 200) + "...",
             content: content,
         });
     };
