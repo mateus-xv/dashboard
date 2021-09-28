@@ -14,9 +14,11 @@
 
 .add{
 	color: $dark-green;
-	visibility: hidden;
 
 	&__modal{
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -74,5 +76,6 @@
 }
 
 .add__modal--visible{
-	visibility: visible;
+	opacity: 1;
+    visibility: visible;
 }

@@ -20,9 +20,10 @@ const Add = () => {
         e.stopPropagation();
     };
 
-    const handleSubmit = (e) => {
+    //Handles note addition modal, dispatching form values and closing the modal
+    const handleSubmit = (e, addModal) => {
         e.preventDefault();
-        const title = document.getElementById("title").value,
+        let title = document.getElementById("title").value,
             content = document.getElementById("note").value;
         addNote({
             title: title,
@@ -30,6 +31,10 @@ const Add = () => {
                 content.length <= 200 ? content : content.slice(0, 200) + "...",
             content: content,
         });
+
+        document.getElementById("title").value = "";
+        document.getElementById("note").value = "";
+        addModal.classList.remove("add__modal--visible");
     };
 
     useEffect(() => {
@@ -41,7 +46,7 @@ const Add = () => {
         addButton.addEventListener("click", () => buttonHandleClick(addModal));
         addModal.addEventListener("click", () => modalHandleClick(addModal));
         addBody.addEventListener("click", bodyHandleClick);
-        form.addEventListener("submit", handleSubmit);
+        form.addEventListener("submit", (e) => handleSubmit(e, addModal));
     }, []);
 
     return (
