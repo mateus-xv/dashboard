@@ -18,14 +18,16 @@ const Main = () => {
 		<main className="clearfix">
             <TransitionGroup>
                 <CSSTransition key={location.pathname} classNames='page' timeout={300}>
-                    <Switch location={location}>
-                        <Route path="/feed" component={Feed}/>
-                        <Route path="/profile" component={Profile}/>
-                        <Route path="/saved" component={Saved}/>
-                        <Route path="/notes" component={Notes}/>
-                        <Route path="/" component={Home}/>
-                        <Redirect to="/"/>
-                    </Switch>			
+                    <div className="main-wrapper">
+                        <Switch location={location}>
+                            <Route path="/feed" component={Feed}/>
+                            <Route path="/profile" component={Profile}/>
+                            <Route path="/saved" component={Saved}/>
+                            <Route path="/notes" component={Notes}/>
+                            <Route path="/" component={Home}/>
+                            <Redirect to="/"/>
+                        </Switch>			
+                    </div>
                 </CSSTransition>
             </TransitionGroup>
 		</main>
