@@ -1,3 +1,4 @@
+@import "../base/clearfix";
 @import "../base/colors";
 
 .note {
@@ -26,10 +27,6 @@
         @extend .news__title;
         width: 100%;
         word-wrap: break-word;
-        cursor: pointer;
-        i {
-            margin-left: 5px;
-        }
     }
 
     &__header{
@@ -60,19 +57,34 @@
         width: 98%;
         max-width: 500px;
         height: 90%;
-        max-height: 450px;
+        max-height: 600px;
         background: $beige;
         padding: 10px;
-
-        h2 {
-            cursor: initial;
-        }
     }
 
     &__content-wrapper {
         width: 100%;
-        height: calc(100% - 39px);
+        height: 100%;
         word-wrap: break-word;
         overflow: auto;
+    }
+
+    &__footer{
+        @extend .clearfix;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 20px;
+
+        i {
+            cursor: pointer;
+        }
+
+        .fa-trash{
+            float: left;
+        }
+
+        .fa-eye{
+            float: right;
+        }
     }
 }

@@ -15,7 +15,7 @@ import 'scss/state/_animations.scss';
 const Main = () => {
     const location = useLocation();
 	return(
-		<main className="clearfix">
+		<main>
             <TransitionGroup>
                 <CSSTransition key={location.pathname} classNames='page' timeout={300}>
                     <div className="main-wrapper">

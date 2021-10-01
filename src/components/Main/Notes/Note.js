@@ -26,10 +26,7 @@ const Note = ({ title, header, content }) => {
             }
             className="note__single"
         >
-            <h2 className="note__title">
-                {title}
-                <i className="fas fa-arrow-circle-right"></i>
-            </h2>
+            <h2 className="note__title">{title}</h2>
             <p className="note__header">{header}</p>
             <div
                 onClick={(e) => modalHandleClick(e, e.target)}
@@ -41,6 +38,10 @@ const Note = ({ title, header, content }) => {
                         <p className="note__content">{content}</p>
                     </div>
                 </div>
+            </div>
+            <div className="note__footer">
+                <i className="fas fa-trash"></i>
+                <i className="fas fa-eye"></i>
             </div>
         </li>
     );

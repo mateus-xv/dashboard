@@ -1,4 +1,7 @@
+@import 'scss/base/clearfix';
+
 main{
+    @extend .clearfix;
 	width: 70%;
 	min-width: calc(100% - 200px);
 	height:calc(100% - 62px);
