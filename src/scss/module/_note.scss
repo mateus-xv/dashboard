@@ -59,7 +59,7 @@
         height: 90%;
         max-height: 600px;
         background: $beige;
-        padding: 10px;
+        padding: 15px;
     }
 
     &__content-wrapper {
@@ -85,6 +85,16 @@
 
         .fa-eye{
             float: right;
+        }
+    }
+    &__footer--disabled{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+
+        i{
+            cursor: pointer;
         }
     }
 }

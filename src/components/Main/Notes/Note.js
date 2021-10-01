@@ -4,7 +4,7 @@ import React from "react";
 const Note = ({ title, header, content }) => {
     //Handles the click event on the note title, turning the modal visible
     const noteHandleClick = (noteModal) => {
-        if (!noteModal.classList.contains("note__modal--visible"))
+        if (content.length > 200)
             noteModal.classList.add("note__modal--visible");
     };
 
@@ -39,10 +39,16 @@ const Note = ({ title, header, content }) => {
                     </div>
                 </div>
             </div>
-            <div className="note__footer">
-                <i className="fas fa-trash"></i>
-                <i className="fas fa-eye"></i>
-            </div>
+            {content.length >= 200 ? (
+                <div className="note__footer">
+                    <i className="fas fa-trash"></i>
+                    <i className="fas fa-eye"></i>
+                </div>
+            ) : (
+                <div className="note__footer--disabled">
+                    <i className="fas fa-trash"></i>
+                </div>
+            )}
         </li>
     );
 };
