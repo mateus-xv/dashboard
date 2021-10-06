@@ -1,11 +1,20 @@
 //React Modules
 import React from "react";
 
-const Note = ({ title, header, content }) => {
+//Action Creator
+import {removeNote} from "redux/creators/actionCreators";
+
+const Note = ({ title, header, content, noteId }) => {
     //Handles the click event on the note title, turning the modal visible
     const noteHandleClick = (noteModal) => {
         if (content.length > 200)
             noteModal.classList.add("note__modal--visible");
+    };
+
+    //Handles the click on remove button, removing the selected note
+    const removeHandleClick = (e) => {
+        e.stopPropagation();
+        removeNote(noteId);
     };
 
     //Handles the click event on the outside of the modal, turning the modal hidden
@@ -41,12 +50,24 @@ const Note = ({ title, header, content }) => {
             </div>
             {content.length >= 200 ? (
                 <div className="note__footer">
-                    <i className="fas fa-trash"></i>
-                    <i className="fas fa-eye"></i>
+                    <button
+                        className="note__remove-button"
+                        onClick={(e) => removeHandleClick(e)}
+                    >
+                        <i className="fas fa-trash"></i>
+                    </button>
+                    <button className="note__inspect-button">
+                        <i className="fas fa-eye"></i>
+                    </button>
                 </div>
             ) : (
                 <div className="note__footer--disabled">
-                    <i className="fas fa-trash"></i>
+                    <button
+                        className="note__remove-button"
+                        onClick={(e) => removeHandleClick(e)}
+                    >
+                        <i className="fas fa-trash"></i>
+                    </button>
                 </div>
             )}
         </li>

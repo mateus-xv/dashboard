@@ -18,6 +18,7 @@ const Notes = () => {
             return state.notes.map((note, index) => (
                 <Note
                     key={index}
+                    noteId={note.noteId}
                     title={note.title}
                     header={note.header}
                     content={note.content}

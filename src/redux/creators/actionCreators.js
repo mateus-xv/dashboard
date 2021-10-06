@@ -29,3 +29,10 @@ export const addNote = (data) => {
         payload: data,
     });
 };
+
+export const removeNote = (index) => {
+    store.dispatch({
+        type: "notes/removeNote",
+        payload: index,
+    });
+};

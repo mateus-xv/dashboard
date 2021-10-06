@@ -73,28 +73,30 @@
         @extend .clearfix;
         width: 100%;
         margin-top: 10px;
-        font-size: 20px;
 
-        i {
-            cursor: pointer;
-        }
-
-        .fa-trash{
-            float: left;
-        }
-
-        .fa-eye{
-            float: right;
+        button {
+            font-size: 20px;
+            color: inherit;
         }
     }
+
+    &__remove-button {
+        float: left;
+    }
+
+    &__inspect-button {
+        float: right;
+    }
+
     &__footer--disabled{
         width: 100%;
         margin-top: 10px;
-        font-size: 20px;
         text-align: center;
 
-        i{
-            cursor: pointer;
+        button{
+            float: none;
+            font-size: 20px;
+            color: inherit;
         }
     }
 }
