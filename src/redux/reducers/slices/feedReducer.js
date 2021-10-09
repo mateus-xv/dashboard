@@ -2,7 +2,7 @@ const initialState = {
     isLoading: true,
     error: false,
     articles: {
-        results: [{ title: "Loading" }],
+        results: [],
     },
 };
 

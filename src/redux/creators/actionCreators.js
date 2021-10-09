@@ -36,3 +36,17 @@ export const removeNote = (index) => {
         payload: index,
     });
 };
+
+export const addArticle = (data) => {
+    store.dispatch({
+        type: "saved/addArticle",
+        payload: data,
+    });
+};
+
+export const removeArticle = (identifier) => {
+    store.dispatch({
+        type: "saved/removeArticle",
+        payload: identifier,
+    });
+};

@@ -1,4 +1,9 @@
+@import 'scss/base/colors';
+
 .saved{
+    width: 100%;
+    text-align: center;
+    color: $dark-green;
 	.cards-wrapper{
 		width: 100%;
 	}

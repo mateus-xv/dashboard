@@ -17,10 +17,26 @@ import getNews from "utils/getNews";
 getNews();
 
 const selector = (state) => state.feed;
+const savedSelector = (state) => state.saved;
 
 const Feed = () => {
     //Component State
     const state = useSelector(selector);
+
+    //Saved State
+    const savedState = useSelector(savedSelector);
+
+    //Checks if the article is already on the saved articles array
+    const isSavedCheck = (article) => {
+        for (let savedArticle of savedState.savedArticles) {
+            if (article.url === savedArticle.url) {
+                return true;
+            } else {
+                continue;
+            }
+        }
+        return false;
+    };
 
     //Checks if articles are available in store
     const articlesCheck = () => {
@@ -35,6 +51,7 @@ const Feed = () => {
                     title={article.title}
                     body={article.abstract}
                     url={article.url}
+                    isSaved={isSavedCheck(article)}
                 />
             ));
         }
