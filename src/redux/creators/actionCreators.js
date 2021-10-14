@@ -50,3 +50,9 @@ export const removeArticle = (identifier) => {
         payload: identifier,
     });
 };
+
+export const clearActivities = () => {
+    store.dispatch({
+        type: "activity/clearActivities",
+    });
+};

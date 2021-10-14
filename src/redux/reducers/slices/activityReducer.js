@@ -4,6 +4,12 @@ const initialState = {
 
 export default function activityReducer(state = initialState, action) {
     switch (action.type) {
+        case "activity/clearActivities": {
+            return {
+                ...state,
+                activities: []
+            }
+        };
         case "profile/usernameChange": {
             return {
                 ...state,
