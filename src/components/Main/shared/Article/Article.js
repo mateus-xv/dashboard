@@ -17,7 +17,7 @@ const Article = ({ title, body, url, isSaved = false }) => {
             });
             setSaved(true);
         } else {
-            removeArticle(url);
+            removeArticle({title, url});
             if (window.location.hash === "#/feed") setSaved(false);
         }
     };

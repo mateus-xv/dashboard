@@ -14,7 +14,7 @@ export default function savedReducer(state = initialState, action) {
             return {
                 ...state,
                 savedArticles: state.savedArticles.filter(
-                    (savedArticle) => savedArticle.url !== action.payload
+                    (savedArticle) => savedArticle.url !== action.payload.url
                 ),
             };
         }

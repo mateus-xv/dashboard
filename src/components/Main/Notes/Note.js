@@ -14,7 +14,7 @@ const Note = ({ title, header, content, noteId }) => {
     //Handles the click on remove button, removing the selected note
     const removeHandleClick = (e) => {
         e.stopPropagation();
-        removeNote(noteId);
+        removeNote({title, noteId});
     };
 
     //Handles the click event on the outside of the modal, turning the modal hidden

@@ -5,7 +5,7 @@ import React from 'react';
 import News from './News';
 import Topics from 'components/Main/shared/Topics/Topics';
 import Support from './Support';
-import Activity from './Activity';
+import LastActivity from './LastActivity';
 
 const Home = () => {
 	return(
@@ -16,7 +16,7 @@ const Home = () => {
 				<Support/>
 			</div>	
 			<div className="column-wrapper">
-				<Activity/>
+				<LastActivity/>
 			</div>
 		</React.Fragment>
 	);
