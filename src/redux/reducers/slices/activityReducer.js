@@ -7,9 +7,9 @@ export default function activityReducer(state = initialState, action) {
         case "activity/clearActivities": {
             return {
                 ...state,
-                activities: []
-            }
-        };
+                activities: [],
+            };
+        }
         case "profile/usernameChange": {
             return {
                 ...state,
