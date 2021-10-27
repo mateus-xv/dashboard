@@ -1,15 +1,41 @@
 @import '../base/fonts';
+@import '../base/colors';
 
 .news{
+    @extend .clearfix;
 	padding: 10px;
+    position: relative;
+    min-height: none;
+    color: $dark-green;
 
 	&__title{
 		font-weight: $light-font;
 		margin-bottom: 10px;
 	}
 
-	&__content{
+	&__content-wrapper{
+        display: flex;
 		width: 100%;
 		font-size: 15px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        scroll-behavior: smooth;
 	}
+
+    &__content{
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    &__arrow-left{
+        float: left;
+        color: inherit;
+        font-size: 20px;
+    }
+
+    &__arrow-right{
+        float: right;
+        color: inherit;
+        font-size: 20px;
+    }
 }
