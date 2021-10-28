@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const Aside = () => {
     let [currentPath, setCurrentPath] = useState(window.location.hash);
+
+    //Checks url, returning the nav icon based on current path
     const urlCheck = (path = "#/") => {
         if (currentPath === path) {
             return "fas fa-angle-double-right";
@@ -11,6 +13,15 @@ const Aside = () => {
             return "fas fa-angle-right";
         }
     };
+
+    //Closes mobile aside bar when selected the link
+    const handleMobileClick = (e) => {
+        e.stopPropagation();
+        if(window.innerWidth < 768){
+            document.querySelector("aside").classList.remove("menu-open");
+            document.getElementById("root").classList.remove("menu-open");
+        }
+    }
 
     useEffect(() => {
         window.addEventListener("hashchange", () =>
@@ -23,7 +34,7 @@ const Aside = () => {
             <div className="logo">
                 <h1 className="logo__name">Dashboard</h1>
             </div>
-            <nav className="aside-nav">
+            <nav onClick={handleMobileClick} className="aside-nav">
                 <NavLink className="aside-nav__link" to="/">
                     <i className={urlCheck()}></i>Home
                 </NavLink>
