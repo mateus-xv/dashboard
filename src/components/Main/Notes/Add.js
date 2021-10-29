@@ -32,17 +32,19 @@ const Add = () => {
         e.preventDefault();
         let title = document.getElementById("title").value,
             content = document.getElementById("note").value;
-        addNote({
-            noteId: state.amount,
-            title: title,
-            header:
-                content.length <= 200 ? content : content.slice(0, 200) + "...",
-            content: content,
-        });
+        if(title.trim() != "" && content.trim() != ""){
+            addNote({
+                noteId: state.amount,
+                title: title,
+                header:
+                    content.length <= 200 ? content : content.slice(0, 200) + "...",
+                content: content,
+            });
+            document.getElementById("title").value = "";
+            document.getElementById("note").value = "";
+            document.querySelector(".add__modal").classList.remove("add__modal--visible");
+        }
 
-        document.getElementById("title").value = "";
-        document.getElementById("note").value = "";
-        document.querySelector(".add__modal").classList.remove("add__modal--visible");
     };
 
     return (
