@@ -16,8 +16,10 @@ const ProfileForm = () => {
 	//Handles form submit, changing username in localStorage and store
 	const handleSubmit = (e, input) => {
 		e.preventDefault();
-		localStorage.setItem("username", input.value);
-		usernameChange(input.value);
+        if(input.value.trim() != ""){
+            localStorage.setItem("username", input.value);
+            usernameChange(input.value);
+        }
 	};
 
 	useEffect(() => {
