@@ -8,6 +8,9 @@ import {
     apiFetchFailed,
 } from "redux/creators/actionCreators";
 
+//Cache Handler
+import getCachedNews from './getCachedNews';
+
 //Delay between function calls
 const delay = 1000;
 let lastExecution = 0;
@@ -20,7 +23,7 @@ export function getNews(section) {
             let apiKey = process.env.REACT_APP_NEWSAPI_KEY,
                 url = `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`;
             apiFetchLoading();
-            const response = await fetch(url);
+            const response = await getCachedNews(url);
             if (!response.ok) {
                 apiFetchFailed();
             } else {
